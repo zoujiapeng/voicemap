@@ -4,6 +4,8 @@
 
 不做任何语音识别。识别引擎 100% 是手机输入法自己的。
 
+[MIT](LICENSE) · Android 11+ · 需 Magisk + LSPosed
+
 ---
 
 ## 原理（3 条）
@@ -114,3 +116,9 @@ am broadcast -a com.pj.voicemap.TRIGGER --es cmd down --ef x 540 --ef y 553 -p <
 - 触发 App 必须**前台且输入框有焦点**，否则 `InputConnection` 不是它，识别结果无处可写。
 - 模块不引任何识别 SDK、不录音、不联网；App 也没有录音权限。
 - 只有 Hook 在输入法进程里才生效：LSPosed 作用域必须是那个输入法包名。
+
+---
+
+## License
+
+MIT，见 [LICENSE](LICENSE)。
